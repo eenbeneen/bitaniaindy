@@ -1,37 +1,72 @@
-.footer-container {
-    background-color: rgb(124, 124, 124);
-    width: 100%;
+.site-footer {
+  background: var(--ink-deep);
+  color: rgba(250,248,242,0.82);
+  padding: 64px 0 28px;
 }
 
-.footer-container-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 25px 5%;
-    color: white;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
 }
 
-.footer-container-categories a {
-    color: white;
-    text-decoration: none;
+.footer-col h3 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1.1em;
 }
 
-.footer-container-categories a:hover {
-    text-decoration: underline;
+html[lang="ti"] .footer-col h3 { font-family: var(--font-ethiopic); letter-spacing: 0; }
+
+.footer-col p, .footer-col a {
+  font-size: 0.92rem;
+  color: rgba(250,248,242,0.78);
 }
 
-.footer-container-categories ul {
-    padding: 0 20px;
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.footer-brand img { width: 36px; height: 36px; object-fit: contain; }
+.footer-brand span {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--paper);
+}
+html[lang="ti"] .footer-brand span { font-family: var(--font-ethiopic); }
+
+.footer-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 48px auto 0;
+  padding: 20px 28px 0;
+  border-top: 1px solid rgba(250,248,242,0.14);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: rgba(250,248,242,0.5);
 }
 
-@media (max-width: 768px) {
-    .footer-container-categories {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 20px;
-    }
+.footer-bottom a {
+  color: rgba(250,248,242,0.55);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-bottom a:hover { color: var(--gold-light); }
+
+@media (max-width: 720px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
 }

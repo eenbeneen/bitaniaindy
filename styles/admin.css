@@ -1,0 +1,117 @@
+.admin-shell { min-height: 60vh; }
+
+.login-panel {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-panel .card { text-align: left; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text);
+}
+html[lang="ti"] .field input,
+html[lang="ti"] .field textarea { font-family: var(--font-ethiopic); }
+
+.field textarea { resize: vertical; min-height: 110px; }
+
+.field input:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184,137,43,0.15);
+}
+
+.form-error {
+  color: var(--wine);
+  font-size: 0.88rem;
+  margin: -8px 0 16px;
+  min-height: 1.2em;
+}
+
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.admin-note {
+  border: 1px solid var(--line);
+  background: var(--paper-alt);
+  padding: 16px 20px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 2.4em;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.admin-post-row {
+  border: 1px solid var(--line);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.admin-post-row .meta { flex: 1; }
+.admin-post-row .admin-post-date {
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.admin-post-row h4 { margin: 0 0 4px; font-size: 1.05rem; }
+.admin-post-row p { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
+
+.icon-btn {
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 7px 13px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.icon-btn:hover { border-color: var(--wine); color: var(--wine); }
+
+.admin-empty { color: var(--text-muted); font-size: 0.92rem; }
+
+@media (max-width: 900px) {
+  .admin-layout { grid-template-columns: 1fr; }
+}

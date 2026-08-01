@@ -1,3 +1,0 @@
-# bezpowerwashing
-
-# Hello World!
